@@ -1,0 +1,92 @@
+import java.util.Scanner; /*Scanner is used to take input from the user.*/  
+
+public class OnlineStore { /*Name of the class*/  
+
+public static void main(String[] args) { /*Variables for product names and prices*/  
+
+String product1 = "Monitor"; /*Variable to name product1*/ 
+double price1 = 249.0; /*Variable to price product1*/  
+ 
+String product2 = "CPU"; /*Variable to name product2*/  
+double price2 = 599.0; /*Variable to price product2*/  
+ 
+String product3 = "GPU"; /*Variable to name product3*/  
+double price3 = 1950.0; /*Variable to price product3*/  
+ 
+String product4 = "RAM";/*Variable to name product4*/  
+double price4 = 78.0;/*Variable to price product4*/  
+ 
+/*Scanner for user input*/  
+Scanner scanner = new Scanner(System.in); 
+double total = 0;      
+ 
+/*Output interface to the program*/  
+System.out.println("Welcome to the Online Store!");  
+System.out.println("Here are the available products:");  
+System.out.println("1. " + product1 + price1 + "£");  
+System.out.println("2. " + product2 + price2 + "£");  
+System.out.println("3. " + product3 + price3 + "£");  
+System.out.println("4. " + product4 + price4 + "£"); 
+ 
+while (true) {  
+    /*Ask the user to select a product*/  
+    System.out.println("Enter the product number to buy (or 'q' to quit): ");  
+    String input = scanner.nextLine();  
+ 
+    /*Check if the user wants to quit*/  
+    if (input.equalsIgnoreCase("q")) {  
+        break;  
+    }  
+ 
+    try {  
+        int productNumber = Integer.parseInt(input);  
+ 
+        /*Validation of product number*/  
+        if (productNumber < 1 || productNumber > 4) {  
+            System.out.println("Invalid product number. Please try again.");  
+            continue;  
+        }  
+ 
+        /*Ask the user for the quantity*/  
+        System.out.println("Enter the quantity: ");  
+        int quantity = Integer.parseInt(scanner.nextLine());  
+ 
+        if (quantity < 0) {  
+            System.out.println("Quantity cannot be negative. Please try again.");  
+            continue;  
+        }  
+ 
+        /*Add the cost of the selected product to the total*/  
+        double cost = 0;  
+        if (productNumber == 1) {  
+            cost = price1 * quantity;  
+            System.out.println("Added " + quantity + " " + product1 + "'s to your cart.");/* Output price and quantity to the product one*/  
+        } else if (productNumber == 2) {  
+            cost = price2 * quantity;  
+            System.out.println("Added " + quantity + " " + product2 + "'s to your cart.");  
+        } else if (productNumber == 3) {  
+            cost = price3 * quantity;  
+            System.out.println("Added " + quantity + " " + product3 + "'s to your cart.");  
+        } else if (productNumber == 4) {  
+            cost = price4 * quantity;  
+            System.out.println("Added " + quantity + " " + product4 + "'s to your cart.");  
+        }  
+ 
+        total += cost;  
+        System.out.println("Current total: " + total + "£");  
+ 
+    } catch (NumberFormatException e) {  
+        System.out.println("Invalid input. Please enter a number or 'q' to quit.");  
+    }  
+}  
+ 
+/*Total amount output*/  
+System.out.println("Thank you for shopping with us!");  
+System.out.println("Your total amount is: " + total + "£");  
+ 
+scanner.close();  
+  
+
+}  
+
+} 
