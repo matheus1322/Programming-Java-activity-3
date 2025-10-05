@@ -1,0 +1,10 @@
+How are you going to solve the problem? 
+
+First, as soon as I understood the problem, I declared variables to set the products and prices, then I took the information entered by the user and validated it so that no errors would occur. 
+With the user's information, I developed a code for the sum and final result of the total costs and used loops for the user to decide when he would like to finish the purchase, thus finalizing the order with the total sum of the products. 
+
+What programming constructs and techniques are you using? Why? 
+
+I used variables to store the names and prices of the products, then I used loops to allow the user to continue selecting products and quantities as much as they want, 
+then I used if-else conditionals to validate the user's inputs so that no errors occur or negative numbers are entered, I also used mathematical operations to multiply, 
+add the price and quantity of the products, and I used outputs to show error messages, to show the purchase menu, prices and quantities and the final price of the products. 
