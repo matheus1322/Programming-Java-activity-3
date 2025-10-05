@@ -1,0 +1,119 @@
+Start 
+
+  
+
+Set product1 = "Monitor", price1 = 249.0 
+
+Set product2 = "CPU", price2 = 599.0 
+
+Set product3 = "GPU", price3 = 1950.0 
+
+Set product4 = "RAM", price4 = 78.0 
+
+  
+
+Set total = 0 
+
+  
+
+Print "Welcome to the Online Store!" 
+
+Print "Here are the available products:" 
+
+Print "1. Monitor - 249.0£" 
+
+Print "2. CPU - 599.0£" 
+
+Print "3. GPU - 1950.0£" 
+
+Print "4. RAM - 78.0£" 
+
+While true do 
+
+Print "Enter the product number to buy (or 'q' to quit): " 
+
+Input userInput 
+
+If userInput Equal "q" Or userInput Equals "Q" Then 
+
+BREAK 
+
+End if  
+
+Try 
+
+Set productNumber = PARSE userInput AS INTEGER 
+
+ 
+
+If productNumber < 1 Or productNumber > 4 Then 
+
+Print "Invalid product number. Please try again." 
+
+CONTINUE 
+
+End if 
+
+ 
+
+Print "Enter the quantity: " 
+
+Input quantity 
+
+ 
+
+ If quantity < 0 THEN 
+
+Print "Quantity cannot be negative. Please try again." 
+
+CONTINUE 
+
+End if 
+
+Set cost = 0 
+
+If productNumber Equals 1 Then 
+
+cost = price1 * quantity 
+
+Print "Added " + quantity + " Monitor(s) to your cart." 
+
+ Else if productNumber Equals 2 Then 
+
+cost = price2 * quantity 
+
+Print "Added " + quantity + " CPU(s) to your cart." 
+
+Else if productNumber Equals 3 Then 
+
+cost = price3 * quantity 
+
+Print "Added " + quantity + " GPU(s) to your cart." 
+
+Else if productNumber Equals 4 Then 
+
+cost = price4 * quantity 
+
+Print "Added " + quantity + " RAM(s) to your cart." 
+
+End if 
+
+total = total + cost 
+
+ Print "Current total: " + total + “£” 
+
+Catch NumberFormatException 
+
+Print "Invalid input. Please enter a number or 'q' to quit." 
+
+End try 
+
+End while 
+
+ /*Display final total and exit message*/ 
+
+Print "Thank you for shopping with us!" 
+
+Print "Your total amount is: " + total + ” £” 
+
+ END 
