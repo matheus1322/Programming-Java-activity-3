@@ -1,0 +1,13 @@
+What are the strengths of your solution? 
+
+The strengths of my code are the simplicity with which the code was made, making it easy to read, with direct and instructive comments, well-structured with variables, loops, error validation, 
+flexibility for the user to choose, input and outputs, the calculation of the total cost of the products well listed after all the purchase entries. 
+
+What are the weaknesses? 
+
+The weak points of my program start with scalability as I had not yet learned about arrays, this limited the program to individual variables for each product, making the program more extended, 
+the structure is also not flexible making the program only have 4 products, there is also a problem that the program does not allow you to remove items from the cart, and the program depends on the user inputting something 
+
+In what way could it be improved? 
+
+To improve, I could structure the code better and simplify it using array lists, a more diverse list of products and a cart that could delete items and change the quantity of items as well.
